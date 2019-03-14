@@ -477,7 +477,6 @@ Video.propTypes = {
   resizeMode: PropTypes.string,
   controlDuration: PropTypes.number,
   videoPlayerStyle: PropTypes.object,
-  ])
 }
 
 Video.defaultProps = {
