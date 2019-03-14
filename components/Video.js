@@ -354,6 +354,7 @@ class Video extends Component {
       playInBackground,
       playWhenInactive,
       controlDuration,
+      videoPlayerStyle,
     } = this.props
 
     const inline = {
@@ -386,7 +387,7 @@ class Video extends Component {
           paused={paused}
           resizeMode={resizeMode}
           repeat={loop}
-          style={fullScreen ? styles.fullScreen : inline}
+          style={[fullScreen ? styles.fullScreen : inline, videoPlayerStyle]}
           ref={(ref) => { this.player = ref }}
           rate={rate}
           volume={volume}
@@ -475,6 +476,8 @@ Video.propTypes = {
   theme: PropTypes.object,
   resizeMode: PropTypes.string,
   controlDuration: PropTypes.number,
+  videoPlayerStyle: PropTypes.object,
+  ])
 }
 
 Video.defaultProps = {
